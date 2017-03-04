@@ -109,6 +109,9 @@ render() {
                                                             <div className="col-lg-12">
                                                                 <Link to="/report">Go to your weekly/monthly report!</Link>
                                                             </div>
+                                                            <div className="col-lg-12">
+                                                                <Link to="/mealplan">Go to your meal plan!</Link>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </form>

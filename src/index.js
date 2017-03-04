@@ -7,6 +7,8 @@ import Profile from './views/profile/view';
 import Notification from './views/notifications/view';
 import Advice from './views/advice/view';
 import Report from './views/report/view';
+import MealPlan from './views/mealplan/view';
+import CustomPlan from './views/customplan/view';
 import Root from './root';
 
 ReactDOM.render((
@@ -18,6 +20,8 @@ ReactDOM.render((
             <Route path="/notifications" component={Notification}/>
             <Route path="/advice" component = {Advice}/>
             <Route path="/report" component = {Report}/>
+            <Route path="/mealplan" component={MealPlan}/>
+            <Route path="/customplan" component={CustomPlan}/>
         </Router>),
     document.getElementById('root')
 );
