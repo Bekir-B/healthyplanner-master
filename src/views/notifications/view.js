@@ -2,6 +2,11 @@ import React from 'react'
 import {Link} from 'react-router';
 export default class Notification extends React.Component {
 
+    onSubmit(e){
+        e.preventDefault();
+        window.location="/mealplan";
+    }
+
 
     render() {
         return (
@@ -21,8 +26,6 @@ export default class Notification extends React.Component {
             <div id="content">
             <center><a href="nalaz.html"> <img id="main_logo" src="../img/logo.png" title="Healthy Planner"/></a>
                 </center>
-
-                <h3> Ovdje idu preuzeti podaci: <br/> Name:_________ <br/> Surname:________ <br/> Age:________ </h3>
 
                 <br/> <br/> <br/>
 
@@ -45,7 +48,7 @@ export default class Notification extends React.Component {
                                             <div className="row">
                                                 <div className="col-lg-12">
 
-                                                    <form id="login-form" action="#" method="post" role="form"
+                                                    <form onSubmit={this.onSubmit.bind(this)}
                                                           style={{display: "block"}}>
 
                                                         <div className="form-group">
@@ -53,7 +56,7 @@ export default class Notification extends React.Component {
                                                             <p className="labels">Breakfast</p>
                                                             <input type="text" name="username" id="username"
                                                                    className="form-control" placeholder="HH:MM"
-                                                                   value=""/>
+                                                                   />
                                                         </div>
 
                                                         <br/> <br/> <br/> <br/>
@@ -90,11 +93,7 @@ export default class Notification extends React.Component {
                                                         </div>
                                                         <div className="form-group">
                                                             <div className="row">
-                                                                <div className="col-lg-12">
-                                                                    <Link to="/advice">Go to: Healthy
-                                                                        Advice! </Link>
 
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </form>

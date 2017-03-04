@@ -39,14 +39,14 @@ export default class CustomMeal extends React.Component {
                                         <br/>
 
                                         <select>
-                                            <option value="new_item">1. Generate this item from DB</option>
-                                            <option value="new_item">2. Generate this item from DB</option>
-                                            <option value="new_item">3. Generate this item from DB</option>
-                                            <option value="new_item">4. Generate this item from DB</option>
+                                            <option value="new_item">1. Milk 50ml</option>
+                                            <option value="new_item">2. Yoghurt 10ml</option>
+                                            <option value="new_item">3. Strawberry 10g</option>
+                                            <option value="new_item">4. Banana 10g</option>
                                         </select>
                                         <br/>
 
-                                        <a href="#" className="myButton myButton2">Add to my diet for today's meal at <span id="txt2"></span> </a>
+                                        <a href="#" className="myButton myButton2">Add to my diet for today's meal at <span></span> </a>
                         </form>
 
                     </center>

@@ -28,10 +28,10 @@ export default class Advice extends React.Component {
                     <center>
 
                         <div id="choose"><h2 className="choose"> Food you should eat more: </h2></div>
-                        <p> Generisati iz baze ... </p>
+
 
                         <div id="choose"><h2 className="choose"> Food you should avoid to eat: </h2></div>
-                        <p> Generisati iz baze ... </p>
+
 
                     </center>
 

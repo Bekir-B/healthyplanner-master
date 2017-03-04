@@ -28,7 +28,7 @@ export default class MealPlan extends React.Component {
                     </center>
 
                     <center>
-                        <img id="recept_img" src="http://placehold.it/650x350"/>
+                        <img id="recept_img" src="./img/slika.jpg"/>
                             <a href="#">
                                 <img id="arrow_right" src="../img/arrow_right.png" title="Next recipe"/>
                             </a>
@@ -37,15 +37,21 @@ export default class MealPlan extends React.Component {
                     <div id="recipe">
                         <i>
                             <ul>
-                                <li> Item 1</li>
-                                <li> Item 2</li>
-                                <li> Item 3</li>
-                                <li> ... </li>
-                                <li> Item n</li>
+                                <li> 1 Banana</li>
+                                <li> 1/2 cup whole strawberries</li>
+                                <li> 8 Blackberries (1/4 cup or so)</li>
+                                <li> 1/2 cup nonfat milk </li>
                             </ul>
                         </i>
                         <p>
-                            Donec malesuada nibh risus, vitae consequat felis dictum eget. Pellentesque non malesuada neque. Duis venenatis laoreet urna, at porta tortor egestas eget. Proin blandit diam odio, eu lacinia nulla posuere non. Phasellus auctor malesuada ipsum, nec tempus est ultrices sit amet. Sed non varius sem. Sed venenatis mi justo, eu porta sapien consectetur eget. Fusce non magna leo. Maecenas euismod sapien in ullamcorper egestas. Nulla malesuada dolor non auctor posuere. Cras et hendrerit orci. Donec vel blandit mi, eget blandit lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer sollicitudin sem velit, ut consequat massa congue sed.
+                            You can multiply the ingredients to make multiple servings.
+                            Also, you can adjust the milk, add more or less to adjust thickness. I like it with body so I just add a little bit.
+
+                            Directions
+
+                            just put in the blender and blend, very yummy, makes a good breakfast. You can also adjust the sugar to your liking or substitute with splenda
+
+                            Number of Servings: 1
                         </p>
                     </div>
 

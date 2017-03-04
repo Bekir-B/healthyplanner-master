@@ -1,7 +1,17 @@
 import React from 'react'
-import {Link} from 'react-router';
+import {Link, browserHistory} from 'react-router';
+import $ from 'jquery';
 export default class Profile extends React.Component {
+    constructor() {
+        super();
+        this.form = {};
+    }
 
+
+onProfileSubmit(e){
+    e.preventDefault();
+   window.location="/notifications";
+}
 
 render() {
     return (
@@ -22,12 +32,10 @@ render() {
 
             <center><a href="#"> <img id="main_logo" src="../img/logo.png" title="Healthy Planner"/></a></center>
 
-            <h4> Ovdje idu preuzeti podaci: <br/> Name: ___________ <br/> Surname: ___________ <br/> Age: _______
-            </h4>
 
             <br/> <br/> <br/>
             <h4> Add the following data in order to analyze the <i> state of your health</i> and generate the
-                weekly/monthly <i>medical report</i> regarding your <b>daily nutrition </b> intake:
+                weekly/monthly <i>medical report</i> regarding your <b> daily nutrition </b> intake:
             </h4>
                     <hr/>
 
@@ -42,30 +50,31 @@ render() {
                                     <div className="panel-body">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <form id="login-form" action="#" method="post" role="form"
+                                                <form onSubmit={this.onProfileSubmit.bind(this)}
                                                       style={{display: "block"}}>
                                                     <div className="form-group">
                                                         <p className="labels">Weight</p>
-                                                        <input type="text" name="username" id="username"
+                                                        <input type="text" name="username" id="weight"
                                                                 className="form-control" placeholder="kg"
-                                                               value=""/>
+                                                               ref={(input => this.weight = input)}/>
                                                     </div>
                                                     <div className="form-group">
                                                         <p className="labels">Height</p>
-                                                        <input type="text" name="username" id="username"
-                                                                className="form-control" placeholder="cm"/>
+                                                        <input type="text" name="username" id="height"
+                                                                className="form-control" placeholder="cm"
+                                                               ref={(input => this.height = input)}/>
                                                     </div>
 
                                                     <div className="form-group">
                                                         <p className="labels">Health issue: <br/><span>(You can select multiple diagnostics)</span>
                                                         </p>
 
-                                                        <input type="checkbox" name="diagnostics" value="Anemia"
+                                                        <input type="checkbox" name="diagnostics" id="anemia" value="Anemia"
                                                                className="check_diagnostics"/>&nbsp;&nbsp; Anemia<br/>
                                                             <input type="checkbox" name="diagnostics"
-                                                                   value="High Chloresterol"
+                                                                   value="High Cholesterol"
                                                                    className="check_diagnostics"/>&nbsp;&nbsp; High
-                                                                Chloresterol<br/>
+                                                                Cholesterol<br/>
                                                                     <input type="checkbox" name="diagnostics"
                                                                            value="Diabetes"
                                                                            className="check_diagnostics"/>&nbsp;&nbsp;
