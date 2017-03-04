@@ -12,18 +12,6 @@ export default class Login extends React.Component {
     render(){
         return(
             <center>
-                <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
-                    <p className="navbar-brand">Healthy Planner</p>
-                    <ul className="nav navbar-nav">
-                        <li><Link to="/profile">Profile</Link></li>
-                        <li><Link to="/mealplan">Your Meal Plan</Link></li>
-                        <li><Link to="/notifications">Notifications</Link></li>
-                        <li><Link to="/report">Weekly/Monthly Report</Link></li>
-                    </ul>
-                    <ul className="nav navbar-nav navbar-right" style={{marginRight: '0'}}>
-
-                    </ul>
-                </nav>
                 <div id="content" >
                     <center> <a href="#"> <img id="main_logo" src="/img/logo.png" /></a> </center>
 

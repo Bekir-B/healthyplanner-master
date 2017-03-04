@@ -8,7 +8,18 @@ export default class MealPlan extends React.Component {
         return (
 
             <center>
+                <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <p className="navbar-brand">Healthy Planner</p>
+                    <ul className="nav navbar-nav">
+                        <li><Link to="/profile">Profile</Link></li>
+                        <li><Link to="/mealplan">Your Meal Plan</Link></li>
+                        <li><Link to="/notifications">Notifications</Link></li>
+                        <li><Link to="/report">Weekly/Monthly Report</Link></li>
+                    </ul>
+                    <ul className="nav navbar-nav navbar-right" style={{marginRight: '0'}}>
 
+                    </ul>
+                </nav>
                 <div id="content">
 
                     <center>
@@ -37,10 +48,7 @@ export default class MealPlan extends React.Component {
                             Donec malesuada nibh risus, vitae consequat felis dictum eget. Pellentesque non malesuada neque. Duis venenatis laoreet urna, at porta tortor egestas eget. Proin blandit diam odio, eu lacinia nulla posuere non. Phasellus auctor malesuada ipsum, nec tempus est ultrices sit amet. Sed non varius sem. Sed venenatis mi justo, eu porta sapien consectetur eget. Fusce non magna leo. Maecenas euismod sapien in ullamcorper egestas. Nulla malesuada dolor non auctor posuere. Cras et hendrerit orci. Donec vel blandit mi, eget blandit lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer sollicitudin sem velit, ut consequat massa congue sed.
                         </p>
                     </div>
-                    <center> <div className="col-lg-12">
-                        <Link to="/report">Go to your weekly/monthly report!</Link>
-                    </div>
-                    </center>
+
 
 
                 </div>

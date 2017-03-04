@@ -1,14 +1,35 @@
 import React from 'react'
-import {Link} from 'react-router';
+import {Link, browserHistory} from 'react-router';
+import $ from 'jquery';
 export default class Register extends React.Component {
+    constructor() {
+        super();
+        this.form = {};
+    }
 
-    onRegisterSubmit(){
-
+    onRegisterSubmit(e) {
+        e.preventDefault();
+        $.post("http://team1.spark-startup.com/user/create",
+            this.state.form).done(function (data) {
+            browserHistory.push("/profile");
+        })
     }
 
     render() {
         return (
             <center>
+                <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <p className="navbar-brand">Healthy Planner</p>
+                    <ul className="nav navbar-nav">
+                        <li><Link to="/profile">Profile</Link></li>
+                        <li><Link to="/mealplan">Your Meal Plan</Link></li>
+                        <li><Link to="/notifications">Notifications</Link></li>
+                        <li><Link to="/report">Weekly/Monthly Report</Link></li>
+                    </ul>
+                    <ul className="nav navbar-nav navbar-right" style={{marginRight: '0'}}>
+
+                    </ul>
+                </nav>
                 <div id="content">
                     <center><a href="#"> <img id="main_logo" src="../img/logo.png"/></a></center>
                     <div className="container">
@@ -25,37 +46,43 @@ export default class Register extends React.Component {
                                     <div className="panel-body">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <form onSubmit={this.onRegisterSubmit.bind(this)} style={{display: "block"}}>
+                                                <form onSubmit={this.onRegisterSubmit.bind(this)}
+                                                      style={{display: "block"}}>
                                                     <div className="form-group">
-                                                        <input type="text" name="username" id="username"
-                                                               className="form-control" placeholder="Name" value=""/>
+                                                        <input type="text" name="username" id="name"
+                                                               className="form-control" placeholder="Name"
+                                                               ref={(input => this.form.name = input.value)}/>
                                                     </div>
                                                     <div className="form-group">
-                                                        <input type="text" name="username" id="username"
-                                                               className="form-control" placeholder="Surname" value=""/>
-                                                    </div>
-
-
-                                                    <div className="form-group">
-                                                        <input type="email" name="username" id="username"
-                                                               className="form-control" placeholder="Email" value=""/>
+                                                        <input type="text" name="username" id="surname"
+                                                               className="form-control" placeholder="Surname"
+                                                               ref={(input => this.form.surname = input.value)}/>
                                                     </div>
 
+
                                                     <div className="form-group">
-                                                        <input type="password" name="password" id="password"
-                                                                className="form-control"
-                                                               placeholder="Password"/>
+                                                        <input type="email" name="username" id="email"
+                                                               className="form-control" placeholder="Email"
+                                                               ref={(input => this.form.email = input.value)}/>
                                                     </div>
+
                                                     <div className="form-group">
-                                                        <input type="password" name="password" id="password"
+                                                        <input type="password" name="password" id="pass"
                                                                className="form-control"
-                                                               placeholder="Confirm password"/>
+                                                               placeholder="Password"
+                                                               ref={(input => this.form.pass = input.value)}/>
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <input type="password" name="password" id="confirm"
+                                                               className="form-control"
+                                                               placeholder="Confirm password"
+                                                               ref={(input => this.form.confirm = input.value)}/>
                                                     </div>
                                                     <div className="form-group">
                                                         <div className="text"><label> Birthday </label></div>
-                                                        <input type="date" name="username" id="username"
+                                                        <input type="date" name="username" id="birthday"
                                                                className="form-control" placeholder="Birthday"
-                                                               value=""/>
+                                                               ref={(input => this.form.birthday = input.value)}/>
                                                     </div>
 
                                                     <div className="form-group">
