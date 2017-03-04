@@ -3,8 +3,10 @@ import './style.css';
 import {Link} from 'react-router';
 export default class Login extends React.Component {
 
-    onLoginSubmit(){
+    onLoginSubmit(e){
         //saljes
+        e.preventDefault();
+        window.location='../profile/';
     }
 
     render(){
@@ -45,6 +47,9 @@ export default class Login extends React.Component {
                                                             <div className="col-lg-12">
                                                                 <div className="text-center">
                                                                     <Link to = "/register">New? Register here!</Link>
+                                                                </div>
+                                                                <div className="text-center">
+                                                                    <Link to = "/bezze">Za ubacit</Link>
                                                                 </div>
                                                             </div>
                                                         </div>
