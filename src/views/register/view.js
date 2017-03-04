@@ -9,8 +9,15 @@ export default class Register extends React.Component {
 
     onRegisterSubmit(e) {
         e.preventDefault();
+        const data = Date.parse(this.birthday.value);
         $.post("http://team1.spark-startup.com/user/create",
-            this.state.form).done(function (data) {
+            {
+                name: this.name.value,
+                surname: this.surname.value,
+                email: this.email.value,
+                password: this.pass.value,
+                birthdate: data
+            }).done(function (data) {
             browserHistory.push("/profile");
         })
     }
@@ -51,38 +58,38 @@ export default class Register extends React.Component {
                                                     <div className="form-group">
                                                         <input type="text" name="username" id="name"
                                                                className="form-control" placeholder="Name"
-                                                               ref={(input => this.form.name = input.value)}/>
+                                                               ref={(input => this.name = input)}/>
                                                     </div>
                                                     <div className="form-group">
                                                         <input type="text" name="username" id="surname"
                                                                className="form-control" placeholder="Surname"
-                                                               ref={(input => this.form.surname = input.value)}/>
+                                                               ref={(input => this.surname = input)}/>
                                                     </div>
 
 
                                                     <div className="form-group">
                                                         <input type="email" name="username" id="email"
                                                                className="form-control" placeholder="Email"
-                                                               ref={(input => this.form.email = input.value)}/>
+                                                               ref={(input => this.email = input)}/>
                                                     </div>
 
                                                     <div className="form-group">
                                                         <input type="password" name="password" id="pass"
                                                                className="form-control"
                                                                placeholder="Password"
-                                                               ref={(input => this.form.pass = input.value)}/>
+                                                               ref={(input => this.pass = input)}/>
                                                     </div>
                                                     <div className="form-group">
                                                         <input type="password" name="password" id="confirm"
                                                                className="form-control"
                                                                placeholder="Confirm password"
-                                                               ref={(input => this.form.confirm = input.value)}/>
+                                                               ref={(input => this.confirm = input)}/>
                                                     </div>
                                                     <div className="form-group">
                                                         <div className="text"><label> Birthday </label></div>
                                                         <input type="date" name="username" id="birthday"
                                                                className="form-control" placeholder="Birthday"
-                                                               ref={(input => this.form.birthday = input.value)}/>
+                                                               ref={(input => this.birthday = input)}/>
                                                     </div>
 
                                                     <div className="form-group">
