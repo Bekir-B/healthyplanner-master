@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router';
 export default class Notification extends React.Component {
 
 
@@ -79,9 +79,8 @@ export default class Notification extends React.Component {
                                                         <div className="form-group">
                                                             <div className="row">
                                                                 <div className="col-lg-12">
-                                                                    <a href="advice.html"
-                                                                       className="forgot-password">Go to: Healthy
-                                                                        Advice!</a>
+                                                                    <Link to="/advice">Go to: Healthy
+                                                                        Advice! </Link>
 
                                                                 </div>
                                                             </div>

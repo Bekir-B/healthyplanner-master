@@ -105,7 +105,9 @@ render() {
                                                             <div className="col-lg-12">
                                                                 <Link to="/notifications">Go to notification
                                                                     settings plan!</Link>
-
+                                                            </div>
+                                                            <div className="col-lg-12">
+                                                                <Link to="/report">Go to your weekly/monthly report!</Link>
                                                             </div>
                                                         </div>
                                                     </div>
