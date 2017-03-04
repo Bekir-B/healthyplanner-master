@@ -49,7 +49,7 @@ export default class Login extends React.Component {
                                                                     <Link to = "/register">New? Register here!</Link>
                                                                 </div>
                                                                 <div className="text-center">
-                                                                    <Link to = "/bezze">Za ubacit</Link>
+                                                                    <Link to = "/something">Za ubacit</Link>
                                                                 </div>
                                                             </div>
                                                         </div>

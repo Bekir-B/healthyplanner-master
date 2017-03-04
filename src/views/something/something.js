@@ -2,7 +2,8 @@ import React from 'react'
 import $ from "jquery";
 export default class Something extends React.Component {
 
-    onBezzeSubmit() {
+    onBezzeSubmit(e) {
+        e.preventDefault();
         $.post("http://team1.spark-startup.com/food/create",
             {
                 name: $("#productName").val(),
@@ -39,21 +40,21 @@ export default class Something extends React.Component {
                                                 <form onSubmit={this.onBezzeSubmit.bind(this)} style={{display: "block"}}>
                                                     <div className="form-group">
                                                         <input type="text" name="username" id="productName"
-                                                               className="form-control" placeholder="Product Name" value=""/>
+                                                               className="form-control" placeholder="Product Name"/>
                                                     </div>
                                                     <div className="form-group">
                                                         <input type="text" name="username" id="vitamin"
-                                                               className="form-control" placeholder="Vitamin" value=""/>
+                                                               className="form-control" placeholder="Vitamin" />
                                                     </div>
 
 
                                                     <div className="form-group">
-                                                        <input type="email" name="username" id="minerals"
-                                                               className="form-control" placeholder="Minerals" value=""/>
+                                                        <input type="text" name="username" id="minerals"
+                                                               className="form-control" placeholder="Minerals" />
                                                     </div>
                                                     <div className="form-group">
-                                                        <input type="email" name="username" id="calories"
-                                                               className="form-control" placeholder="Calories" value=""/>
+                                                        <input type="textl" name="username" id="calories"
+                                                               className="form-control" placeholder="Calories" />
                                                     </div>
                                                     <div className="form-group">
                                                         <input type="text" name="password" id="saturatedFat"
@@ -66,22 +67,21 @@ export default class Something extends React.Component {
                                                                placeholder="Protein"/>
                                                     </div>
                                                     <div className="form-group">
-                                                        <div className="text"><label> Birthday </label></div>
+                                                        <div className="text"></div>
                                                         <input type="text" name="username" id="fibers"
                                                                className="form-control" placeholder="Fibers"
-                                                               value=""/>
+                                                               />
                                                     </div>
 
                                                     <div className="form-group">
-                                                        <div className="text"><label> Birthday </label></div>
+                                                        <div className="text"></div>
                                                         <input type="text" name="username" id="carbs"
-                                                               className="form-control" placeholder="Carbohydrates"
-                                                               value=""/>
+                                                               className="form-control" placeholder="Carbohydrates"/>
                                                     </div><div className="form-group">
-                                                    <div className="text"><label> Birthday </label></div>
+                                                    <div className="text"></div>
                                                     <input type="text" name="username" id="sugars"
                                                            className="form-control" placeholder="Sugars"
-                                                           value=""/>
+                                                          />
                                                 </div>
                                                     <div className="form-group">
                                                         <div className="row">
