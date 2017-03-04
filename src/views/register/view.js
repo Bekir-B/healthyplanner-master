@@ -72,7 +72,7 @@ export default class Register extends React.Component {
                                                         <div className="row">
                                                             <div className="col-lg-12">
                                                                 <div className="text-center">
-                                                                    <Link to="/login">Already have a
+                                                                    <Link to="/profile">Already have a
                                                                         profile? Login here!</Link>
                                                                 </div>
                                                             </div>

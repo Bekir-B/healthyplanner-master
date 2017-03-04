@@ -1,5 +1,5 @@
 import React from 'react'
-import $ from "jquery";
+import {Link} from 'react-router';
 export default class Profile extends React.Component {
 
 
@@ -23,7 +23,7 @@ render() {
 
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-4 col-md-offset-3">
+                            <div className="col-md-4 col-md-offset-4">
                             <center>
                                 <div className="panel panel-login">
 
@@ -103,9 +103,8 @@ render() {
                                                     <div className="form-group">
                                                         <div className="row">
                                                             <div className="col-lg-12">
-                                                                <a href="notification_settings.html"
-                                                                   className="forgot-password">Go to notification
-                                                                    settings plan!</a>
+                                                                <Link to="/notifications">Go to notification
+                                                                    settings plan!</Link>
 
                                                             </div>
                                                         </div>
